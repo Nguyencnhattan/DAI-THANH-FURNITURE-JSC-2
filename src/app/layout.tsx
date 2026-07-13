@@ -3,22 +3,27 @@ import { Cinzel, Sora } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { siteConfig } from "@/lib/data";
 import "./globals.css";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
+  adjustFontFallback: true,
 });
 
 const sora = Sora({
   variable: "--font-sora",
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   weight: ["300", "400", "500", "600"],
   display: "swap",
+  adjustFontFallback: true,
 });
+
+const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}var r=document.documentElement;r.classList.toggle('light',t==='light');r.classList.toggle('dark',t==='dark');r.style.colorScheme=t;}catch(e){}})();`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -29,7 +34,6 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "Dai Thanh Furniture",
-    "Đại Thành Furniture",
     "wooden furniture Vietnam",
     "outdoor furniture manufacturer",
     "indoor furniture export",
@@ -40,8 +44,8 @@ export const metadata: Metadata = {
   creator: siteConfig.legalName,
   openGraph: {
     type: "website",
-    locale: "vi_VN",
-    alternateLocale: ["en_US"],
+    locale: "en_US",
+    alternateLocale: ["vi_VN"],
     url: siteConfig.url,
     siteName: siteConfig.name,
     title: `${siteConfig.name} | ${siteConfig.tagline}`,
@@ -86,12 +90,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`${cinzel.variable} ${sora.variable} h-full`}>
+    <html lang="en" className={`${cinzel.variable} ${sora.variable} dark h-full`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col antialiased">
-        <JsonLd />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <ThemeProvider>
+          <JsonLd />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -52,16 +52,16 @@ export function Hero() {
               {siteConfig.tagline}
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-muted md:text-lg">
-              Nhà sản xuất Indoor · Outdoor · Kitchen cabinets từ năm 1995 — xuất khẩu
-              chất lượng Việt Nam ra thế giới.
+              Manufacturer of Indoor · Outdoor · Kitchen cabinets since 1995 — exporting
+              Vietnamese quality to the world.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link href="/products" className="btn">
-                Xem bộ sưu tập
+                View Collections
               </Link>
               <Link href="/about" className="btn btn-ghost">
-                Câu chuyện Đại Thành
+                Our Story
               </Link>
             </div>
           </motion.div>

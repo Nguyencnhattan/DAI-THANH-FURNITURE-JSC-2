@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Dai Thanh Furniture",
   legalName: "DAI THANH FURNITURE JSC",
-  tagline: "Nghệ thuật gỗ Việt — chuẩn mực toàn cầu",
+  tagline: "Vietnamese Woodcraft — Global Standards",
   description:
-    "Công ty Cổ phần Công nghệ Gỗ Đại Thành — nhà sản xuất nội thất gỗ Indoor, Outdoor và Kitchen cabinets hàng đầu Việt Nam từ năm 1995.",
+    "Dai Thanh Furniture Joint Stock Company — a leading Vietnamese manufacturer of indoor, outdoor, and kitchen cabinet furniture since 1995.",
   url: "https://daithanhfurniture.com",
   phone: "+84 2563 510 600",
   phoneHref: "tel:+842563510600",
@@ -19,48 +19,48 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { href: "/", label: "Trang chủ" },
-  { href: "/about", label: "Về chúng tôi" },
-  { href: "/products", label: "Sản phẩm" },
-  { href: "/factory", label: "Nhà máy" },
-  { href: "/contact", label: "Liên hệ" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/products", label: "Products" },
+  { href: "/factory", label: "Factory" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const stats = [
-  { value: "31+", label: "Năm kinh nghiệm" },
-  { value: "1.800+", label: "Nhân sự" },
-  { value: "20ha", label: "Quy mô nhà máy" },
-  { value: "200+", label: "Container/tháng" },
+  { value: "31+", label: "Years of Experience" },
+  { value: "1,800+", label: "Employees" },
+  { value: "20ha", label: "Factory Scale" },
+  { value: "200+", label: "Containers / Month" },
 ];
 
 export const categories = [
   {
     slug: "outdoor",
     title: "Outdoor",
-    subtitle: "Nội thất ngoài trời",
+    subtitle: "Outdoor Furniture",
     count: 10,
     description:
-      "Bộ sưu tập outdoor gỗ cao cấp cho resort, patio, vườn và không gian thương mại — bền vững dưới mọi thời tiết.",
+      "Premium outdoor wood collections for resorts, patios, gardens, and commercial spaces — built to endure every season.",
     image:
       "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
   },
   {
     slug: "indoor",
     title: "Indoor",
-    subtitle: "Nội thất trong nhà",
+    subtitle: "Indoor Furniture",
     count: 3,
     description:
-      "Thiết kế indoor tinh tế, gỗ chọn lọc và hoàn thiện tỉ mỉ — mang hơi thở thủ công Việt Nam vào không gian sống hiện đại.",
+      "Refined indoor designs with carefully selected timber and meticulous finishing — Vietnamese craftsmanship for modern living.",
     image:
       "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
   },
   {
     slug: "kitchen",
     title: "Kitchen",
-    subtitle: "Tủ bếp & cabinetry",
+    subtitle: "Kitchen Cabinetry",
     count: 2,
     description:
-      "Hệ tủ bếp gỗ chất lượng xuất khẩu, tối ưu công năng và thẩm mỹ cho không gian bếp gia đình lẫn dự án thương mại.",
+      "Export-grade wooden kitchen cabinets optimized for function and aesthetics — for homes and commercial projects alike.",
     image:
       "https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1600&q=80",
   },
@@ -104,7 +104,7 @@ export const products = [
   },
   {
     slug: "rect-ext-table",
-    name: "Rect. Ext Table",
+    name: "Rect. Ext. Table",
     category: "outdoor",
     image:
       "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1200&q=80",
@@ -131,8 +131,8 @@ export const products = [
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    slug: "tenis-set",
-    name: "Tenis Set",
+    slug: "tennis-set",
+    name: "Tennis Set",
     category: "outdoor",
     image:
       "https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=1200&q=80",
@@ -148,42 +148,42 @@ export const products = [
 
 export const values = [
   {
-    title: "Uy tín",
-    text: "Minh bạch năng lực sản xuất, quy mô nhà máy và chất lượng sản phẩm — xây dựng quan hệ đối tác lâu dài.",
+    title: "Integrity",
+    text: "Transparent production capacity, factory scale, and product quality — building lasting partnerships.",
   },
   {
-    title: "Chất lượng",
-    text: "Gỗ chọn lọc, quy trình chuẩn ISO, hoàn thiện tỉ mỉ theo chuẩn xuất khẩu châu Âu, Mỹ, Úc.",
+    title: "Quality",
+    text: "Selected timber, ISO-aligned processes, and meticulous finishing to European, US, and Australian export standards.",
   },
   {
-    title: "Đúng hạn",
-    text: "Công suất trung bình ~200 container 40'/tháng, đáp ứng đơn hàng lớn và tiến độ quốc tế.",
+    title: "On Time",
+    text: "Average capacity of ~200 × 40' containers per month — ready for large orders and international schedules.",
   },
   {
-    title: "Thủ công tinh xảo",
-    text: "Kết hợp tay nghề Việt Nam với máy móc hiện đại để tạo nên thiết kế trending và bền vững.",
+    title: "Fine Craftsmanship",
+    text: "Vietnamese skilled hands combined with modern machinery to deliver trending, durable designs.",
   },
 ];
 
 export const factoryLines = [
   {
-    title: "Outdoor production line",
+    title: "Outdoor Production Line",
     description:
-      "Dây chuyền sản xuất nội thất ngoài trời — sofa, dining, sunlounge và bộ sưu tập patio xuất khẩu.",
+      "Outdoor furniture manufacturing — sofa, dining, sunlounge, and patio collections for export markets.",
     image:
       "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "Indoor production line",
+    title: "Indoor Production Line",
     description:
-      "Dây chuyền indoor với kiểm soát chất lượng nghiêm ngặt cho không gian sống và dự án nội thất.",
+      "Indoor production with strict quality control for residential spaces and furniture projects.",
     image:
       "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "Kitchen cabinet production line",
+    title: "Kitchen Cabinet Production Line",
     description:
-      "Dây chuyền tủ bếp chuyên biệt — độ chính xác cao, hoàn thiện đồng bộ theo tiêu chuẩn xuất khẩu.",
+      "Dedicated kitchen cabinet line — high precision and consistent finishing to export standards.",
     image:
       "https://images.unsplash.com/photo-1556911220-bff31c875d1a?auto=format&fit=crop&w=1400&q=80",
   },
@@ -209,8 +209,8 @@ export const news = [
 ];
 
 export const aboutQuote =
-  "Thank you for visiting DAI THANH FURNITURE JSC website, this is an opportunity for us to build a long-lasting business relationship with you. Hopefully, you can easily find useful and transparent information regarding production capacity, the scale of the factory, product quality, and the trending designs developed by our team.";
+  "Thank you for visiting the DAI THANH FURNITURE JSC website. This is an opportunity for us to build a long-lasting business relationship with you. We hope you can easily find useful and transparent information regarding production capacity, factory scale, product quality, and the trending designs developed by our team.";
 
-export const aboutStory = `DAI THANH FURNITURE .,Ltd được thành lập ngày 23/06/1995 và chuyển đổi thành DAI THANH FURNITURE JSC vào ngày 25/10/2007. Chúng tôi phát triển trở thành một trong những nhà máy gỗ nội thất hàng đầu Việt Nam trong lĩnh vực Indoor, Outdoor và Kitchen cabinets.`;
+export const aboutStory = `DAI THANH FURNITURE Co., Ltd. was founded on 23 June 1995 and converted into DAI THANH FURNITURE JSC on 25 October 2007. We have grown into one of Vietnam's leading wooden furniture factories in Indoor, Outdoor, and Kitchen cabinets.`;
 
-export const aboutExtra = `Với khoảng 1.800 nhân sự và quy mô nhà máy lên đến 20ha gần Quốc lộ 1A, Quy Nhơn, Đại Thành xuất khẩu trung bình khoảng 200 container 40'/tháng tới các thị trường Mỹ, châu Âu và Úc — cam kết Uy tín · Chất lượng · Kịp thời.`;
+export const aboutExtra = `With about 1,800 employees and a factory of up to 20 hectares near National Highway 1A in Quy Nhon, Dai Thanh exports an average of about 200 × 40' containers per month to the US, Europe, and Australia — committed to Integrity · Quality · On Time.`;

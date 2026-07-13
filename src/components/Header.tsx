@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { navLinks, siteConfig } from "@/lib/data";
 
 export function Header() {
@@ -54,30 +55,34 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <a href={siteConfig.phoneHref} className="text-sm text-muted hover:text-gold">
             {siteConfig.phone}
           </a>
           <Link href="/contact" className="btn !px-5 !py-3 text-[0.68rem]">
-            Báo giá
+            Get a Quote
           </Link>
         </div>
 
-        <button
-          type="button"
-          className="relative z-20 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
-          aria-label="Menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span
-            className={`h-px w-6 bg-gold transition ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
-          />
-          <span className={`h-px w-6 bg-gold transition ${open ? "opacity-0" : ""}`} />
-          <span
-            className={`h-px w-6 bg-gold transition ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
-          />
-        </button>
+        <div className="relative z-20 flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5"
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span
+              className={`h-px w-6 bg-gold transition ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+            />
+            <span className={`h-px w-6 bg-gold transition ${open ? "opacity-0" : ""}`} />
+            <span
+              className={`h-px w-6 bg-gold transition ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+            />
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -93,7 +98,7 @@ export function Header() {
               </Link>
             ))}
             <Link href="/contact" className="btn mt-2">
-              Liên hệ tư vấn
+              Contact Us
             </Link>
           </nav>
         </div>

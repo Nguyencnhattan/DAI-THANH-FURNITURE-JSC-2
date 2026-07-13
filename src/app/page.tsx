@@ -15,7 +15,7 @@ import {
 } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Trang chủ",
+  title: "Home",
   description: siteConfig.description,
   alternates: { canonical: "/" },
 };
@@ -31,7 +31,7 @@ export default function HomePage() {
           <Reveal>
             <p className="eyebrow">{siteConfig.experienceYears} Years Of Experience</p>
             <h2 className="display mt-4 text-4xl text-ivory md:text-5xl">
-              We provide best and quality furniture product for you
+              We provide the best quality furniture products for you
             </h2>
             <div className="divider-gold mt-6" />
             <p className="mt-6 text-sm italic leading-8 text-muted md:text-base">
@@ -55,7 +55,9 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 border border-line bg-bg/70 p-5 backdrop-blur-md">
                 <p className="eyebrow">Since 1995</p>
-                <p className="display mt-2 text-2xl gold-text">Leading wooden furniture factory in Vietnam</p>
+                <p className="display mt-2 text-2xl gold-text">
+                  Leading wooden furniture factory in Vietnam
+                </p>
               </div>
             </div>
           </Reveal>
@@ -79,9 +81,9 @@ export default function HomePage() {
         <div className="container-wide section-pad !pb-8">
           <Reveal>
             <p className="eyebrow">Collections</p>
-            <h2 className="display mt-3 text-4xl md:text-5xl">Bộ sưu tập Đại Thành</h2>
+            <h2 className="display mt-3 text-4xl md:text-5xl">Dai Thanh Collections</h2>
             <p className="mt-4 max-w-2xl text-muted">
-              Will be the place to create value for you — Indoor, Outdoor & Kitchen.
+              A place to create lasting value for you — Indoor, Outdoor & Kitchen.
             </p>
           </Reveal>
         </div>
@@ -119,7 +121,7 @@ export default function HomePage() {
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <Reveal>
               <p className="eyebrow">Our Products</p>
-              <h2 className="display mt-3 text-4xl md:text-5xl">Featured pieces</h2>
+              <h2 className="display mt-3 text-4xl md:text-5xl">Featured Pieces</h2>
             </Reveal>
             <Reveal delay={0.1}>
               <Link href="/products" className="btn btn-ghost">
@@ -157,7 +159,9 @@ export default function HomePage() {
         <div className="container-narrow">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Core Values</p>
-            <h2 className="display mt-3 text-4xl md:text-5xl">Uy tín · Chất lượng · Kịp thời</h2>
+            <h2 className="display mt-3 text-4xl md:text-5xl">
+              Integrity · Quality · On Time
+            </h2>
           </Reveal>
 
           <div className="mt-14 grid gap-10 md:grid-cols-2">
@@ -188,8 +192,8 @@ export default function HomePage() {
               Get inspired by Vietnamese craftsmanship
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-muted">
-              Trusted by over 100+ companies worldwide. Nhận catalogue và tư vấn sản xuất theo
-              yêu cầu.
+              Trusted by over 100+ companies worldwide. Request our catalogue and custom
+              manufacturing consultation.
             </p>
             <Link href="/contact" className="btn mt-8">
               Receive Catalogue
@@ -203,7 +207,7 @@ export default function HomePage() {
         <div className="container-narrow">
           <Reveal>
             <p className="eyebrow">News & Events</p>
-            <h2 className="display mt-3 text-4xl">Our latest updates</h2>
+            <h2 className="display mt-3 text-4xl">Our Latest Updates</h2>
           </Reveal>
           <div className="mt-10 space-y-0">
             {news.map((item, i) => (
@@ -228,7 +232,7 @@ export default function HomePage() {
           <Reveal>
             <p className="eyebrow">Get In Touch</p>
             <h2 className="display mt-3 text-3xl md:text-4xl">
-              Sẵn sàng đồng hành cùng đối tác toàn cầu
+              Ready to partner with global clients
             </h2>
             <p className="mt-4 text-sm leading-8 text-muted">{siteConfig.address}</p>
           </Reveal>

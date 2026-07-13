@@ -11,8 +11,38 @@
   --ivory: #f3ebe0;
   --muted: #a89b88;
   --line: rgba(201, 164, 92, 0.22);
+  --overlay-strong: rgba(11, 9, 7, 0.88);
+  --overlay-mid: rgba(11, 9, 7, 0.55);
+  --overlay-soft: rgba(11, 9, 7, 0.28);
+  --overlay-top: rgba(11, 9, 7, 0.35);
+  --overlay-bottom: rgba(11, 9, 7, 0.85);
+  --meta-fade: rgba(11, 9, 7, 0.92);
+  --btn-ink: #140f09;
   --font-display: var(--font-cinzel);
   --font-body: var(--font-sora);
+  color-scheme: dark;
+}
+
+/* Light: gold + white (đối xứng dark: gold + black) */
+html.light {
+  --bg: #ffffff;
+  --bg-elevated: #f7f7f7;
+  --bg-soft: #eeeeee;
+  --gold: #c9a45c;
+  --gold-bright: #b8913f;
+  --gold-deep: #8b6a32;
+  --bronze: #6e5228;
+  --ivory: #111111;
+  --muted: #666666;
+  --line: rgba(201, 164, 92, 0.35);
+  --overlay-strong: rgba(255, 255, 255, 0.92);
+  --overlay-mid: rgba(255, 255, 255, 0.62);
+  --overlay-soft: rgba(255, 255, 255, 0.3);
+  --overlay-top: rgba(255, 255, 255, 0.4);
+  --overlay-bottom: rgba(255, 255, 255, 0.9);
+  --meta-fade: rgba(0, 0, 0, 0.72);
+  --btn-ink: #140f09;
+  color-scheme: light;
 }
 
 @theme inline {
@@ -42,8 +72,12 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ivory);
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-body), "Segoe UI", system-ui, sans-serif;
+  font-feature-settings: "kern" 1, "liga" 1;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 ::selection {
@@ -76,8 +110,12 @@ img {
   z-index: 1;
 }
 
+html.light .grain::after {
+  opacity: 0.02;
+}
+
 .gold-text {
-  background: linear-gradient(120deg, #f0d9a0 0%, #c9a45c 45%, #8b6a32 100%);
+  background: linear-gradient(120deg, var(--gold-bright) 0%, var(--gold) 45%, var(--gold-deep) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -102,14 +140,15 @@ img {
 }
 
 .display {
-  font-family: var(--font-display), serif;
+  font-family: var(--font-display), "Times New Roman", serif;
   letter-spacing: 0.04em;
   font-weight: 500;
-  line-height: 1.08;
+  line-height: 1.15;
+  font-synthesis: none;
 }
 
 .eyebrow {
-  font-family: var(--font-display), serif;
+  font-family: var(--font-display), "Times New Roman", serif;
   font-size: 0.72rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -124,8 +163,8 @@ img {
   padding: 0.95rem 1.6rem;
   border: 1px solid var(--gold);
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
-  color: #140f09;
-  font-family: var(--font-display), serif;
+  color: var(--btn-ink);
+  font-family: var(--font-display), "Times New Roman", serif;
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -135,7 +174,7 @@ img {
 .btn:hover {
   transform: translateY(-2px);
   filter: brightness(1.06);
-  box-shadow: 0 12px 40px rgba(201, 164, 92, 0.25);
+  box-shadow: 0 12px 40px color-mix(in srgb, var(--gold) 25%, transparent);
 }
 
 .btn-ghost {
@@ -203,10 +242,27 @@ img {
   transform: scaleX(1);
 }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg-elevated) 70%, transparent);
+  color: var(--gold);
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+
 .hero-overlay {
   background:
-    linear-gradient(90deg, rgba(11, 9, 7, 0.88) 0%, rgba(11, 9, 7, 0.55) 48%, rgba(11, 9, 7, 0.28) 100%),
-    linear-gradient(180deg, rgba(11, 9, 7, 0.35) 0%, rgba(11, 9, 7, 0.15) 40%, rgba(11, 9, 7, 0.85) 100%);
+    linear-gradient(90deg, var(--overlay-strong) 0%, var(--overlay-mid) 48%, var(--overlay-soft) 100%),
+    linear-gradient(180deg, var(--overlay-top) 0%, transparent 40%, var(--overlay-bottom) 100%);
 }
 
 .collection-panel {
@@ -242,7 +298,8 @@ img {
   inset-inline: 0;
   bottom: 0;
   padding: 1.5rem;
-  background: linear-gradient(transparent, rgba(11, 9, 7, 0.92));
+  background: linear-gradient(transparent, var(--meta-fade));
+  color: #f3ebe0;
   transform: translateY(8px);
   transition: transform 0.4s ease;
 }

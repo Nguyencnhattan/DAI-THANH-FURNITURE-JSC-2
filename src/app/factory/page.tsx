@@ -5,9 +5,9 @@ import { Reveal } from "@/components/Reveal";
 import { factoryLines, siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Nhà máy",
+  title: "Factory",
   description:
-    "Dây chuyền Outdoor, Indoor và Kitchen cabinet của Dai Thanh Furniture — quy mô 20ha tại Quy Nhơn.",
+    "Outdoor, Indoor, and Kitchen cabinet production lines at Dai Thanh Furniture — 20ha facility in Quy Nhon.",
   alternates: { canonical: "/factory" },
 };
 
@@ -28,11 +28,11 @@ export default function FactoryPage() {
           <Reveal>
             <p className="eyebrow">Our Factory</p>
             <h1 className="display mt-3 max-w-3xl text-4xl md:text-6xl">
-              Năng lực sản xuất chuẩn xuất khẩu
+              Export-grade production capacity
             </h1>
             <p className="mt-4 max-w-2xl text-muted">
-              Ba dây chuyền chuyên biệt — Outdoor, Indoor và Kitchen cabinets — phục vụ thị
-              trường quốc tế.
+              Three specialized lines — Outdoor, Indoor, and Kitchen cabinets — serving
+              international markets.
             </p>
           </Reveal>
         </div>
@@ -78,15 +78,15 @@ export default function FactoryPage() {
               ~200 × 40&apos; containers / month
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-muted">
-              Nhà máy gần Quốc lộ 1A, phục vụ đơn hàng lớn tới Mỹ, châu Âu và Úc. Liên hệ đội
-              Sales để nhận capacity sheet và brochure.
+              Our factory near National Highway 1A serves large orders to the US, Europe, and
+              Australia. Contact Sales for a capacity sheet and brochure.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a href={siteConfig.phoneHref} className="btn">
                 {siteConfig.phone}
               </a>
               <Link href="/contact" className="btn btn-ghost">
-                Download brochure
+                Download Brochure
               </Link>
             </div>
           </Reveal>

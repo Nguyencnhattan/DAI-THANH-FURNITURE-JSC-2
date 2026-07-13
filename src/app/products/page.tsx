@@ -5,9 +5,9 @@ import { Reveal } from "@/components/Reveal";
 import { categories, products, siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Sản phẩm",
+  title: "Products",
   description:
-    "Bộ sưu tập Outdoor, Indoor và Kitchen cabinets của Dai Thanh Furniture — chất lượng xuất khẩu.",
+    "Outdoor, Indoor, and Kitchen cabinet collections by Dai Thanh Furniture — export-quality craftsmanship.",
   alternates: { canonical: "/products" },
 };
 
@@ -29,7 +29,8 @@ export default async function ProductsPage({ searchParams }: Props) {
             <p className="eyebrow">Our Products</p>
             <h1 className="display mt-3 text-4xl md:text-6xl">Dai Thanh Collections</h1>
             <p className="mt-4 max-w-2xl text-muted">
-              {siteConfig.tagline}. Khám phá các dòng sản phẩm gỗ tinh xảo cho thị trường toàn cầu.
+              {siteConfig.tagline}. Explore finely crafted wood product lines for the global
+              market.
             </p>
           </Reveal>
 

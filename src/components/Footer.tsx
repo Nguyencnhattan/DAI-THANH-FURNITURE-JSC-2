@@ -31,7 +31,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow">Điều hướng</p>
+            <p className="eyebrow">Navigate</p>
             <ul className="mt-5 space-y-3 text-sm text-muted">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -44,7 +44,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow">Liên hệ</p>
+            <p className="eyebrow">Contact</p>
             <ul className="mt-5 space-y-3 text-sm leading-7 text-muted">
               <li>
                 <a href={siteConfig.phoneHref} className="hover:text-gold">
@@ -66,7 +66,7 @@ export function Footer() {
             © {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.
           </p>
           <p className="tracking-[0.2em] uppercase text-gold/70">
-            Prestige · Quality · On Time
+            Integrity · Quality · On Time
           </p>
         </div>
       </div>

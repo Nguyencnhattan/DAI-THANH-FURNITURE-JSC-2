@@ -12,9 +12,9 @@ import {
 } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Về chúng tôi",
+  title: "About",
   description:
-    "Lịch sử, năng lực sản xuất và cam kết chất lượng của Dai Thanh Furniture JSC từ năm 1995.",
+    "History, production capacity, and quality commitment of Dai Thanh Furniture JSC since 1995.",
   alternates: { canonical: "/about" },
 };
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
         <div className="container-narrow grid gap-12 lg:grid-cols-2">
           <Reveal>
             <h2 className="display text-3xl md:text-4xl">
-              We provide best and quality furniture product for you
+              We provide the best quality furniture products for you
             </h2>
             <div className="divider-gold mt-6" />
             <p className="mt-6 text-sm italic leading-8 text-muted">“{aboutQuote}”</p>
@@ -54,7 +54,7 @@ export default function AboutPage() {
             <p className="text-sm leading-8 text-muted md:text-base">{aboutStory}</p>
             <p className="mt-5 text-sm leading-8 text-muted md:text-base">{aboutExtra}</p>
             <Link href="/factory" className="btn mt-8">
-              Xem nhà máy
+              Visit the Factory
             </Link>
           </Reveal>
         </div>
@@ -75,7 +75,7 @@ export default function AboutPage() {
         <div className="container-narrow">
           <Reveal>
             <p className="eyebrow">Our Promise</p>
-            <h2 className="display mt-3 text-4xl">Giá trị cốt lõi</h2>
+            <h2 className="display mt-3 text-4xl">Core Values</h2>
           </Reveal>
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             {values.map((item, i) => (

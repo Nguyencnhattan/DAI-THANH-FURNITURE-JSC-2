@@ -4,9 +4,9 @@ import { Reveal } from "@/components/Reveal";
 import { siteConfig } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Liên hệ",
+  title: "Contact",
   description:
-    "Liên hệ Dai Thanh Furniture JSC — địa chỉ Quy Nhơn, hotline +84 2563 510 600, email info@daithanhfurniture.com.",
+    "Contact Dai Thanh Furniture JSC — Quy Nhon address, hotline +84 2563 510 600, email info@daithanhfurniture.com.",
   alternates: { canonical: "/contact" },
 };
 
@@ -18,8 +18,8 @@ export default function ContactPage() {
           <p className="eyebrow">Contact</p>
           <h1 className="display mt-3 text-4xl md:text-6xl">Get In Touch</h1>
           <p className="mt-4 max-w-2xl text-muted">
-            Kết nối với đội ngũ Dai Thanh Furniture để nhận catalogue, báo giá OEM/ODM và thông
-            tin năng lực sản xuất.
+            Connect with the Dai Thanh Furniture team for catalogues, OEM/ODM quotations, and
+            production capacity details.
           </p>
         </Reveal>
 
