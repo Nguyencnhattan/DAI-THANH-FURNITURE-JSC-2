@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Cinzel, Sora } from "next/font/google";
+import { Be_Vietnam_Pro, Cinzel, Sora } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { siteConfig } from "@/lib/data";
+import { dictionaries } from "@/lib/i18n";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -23,7 +25,15 @@ const sora = Sora({
   adjustFontFallback: true,
 });
 
-const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}var r=document.documentElement;r.classList.toggle('light',t==='light');r.classList.toggle('dark',t==='dark');r.style.colorScheme=t;}catch(e){}})();`;
+const beVietnam = Be_Vietnam_Pro({
+  variable: "--font-viet",
+  subsets: ["latin", "vietnamese"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  adjustFontFallback: true,
+});
+
+const bootScript = `(function(){try{var r=document.documentElement;var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}r.classList.toggle('light',t==='light');r.classList.toggle('dark',t==='dark');r.style.colorScheme=t;var l=localStorage.getItem('locale');if(l!=='vi'&&l!=='en'){l='en';}r.lang=l;}catch(e){}})();`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -31,9 +41,10 @@ export const metadata: Metadata = {
     default: `${siteConfig.name} | Indoor · Outdoor · Kitchen Furniture`,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: dictionaries.en.site.description,
   keywords: [
     "Dai Thanh Furniture",
+    "Đại Thành Furniture",
     "wooden furniture Vietnam",
     "outdoor furniture manufacturer",
     "indoor furniture export",
@@ -48,8 +59,8 @@ export const metadata: Metadata = {
     alternateLocale: ["vi_VN"],
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | ${siteConfig.tagline}`,
-    description: siteConfig.description,
+    title: `${siteConfig.name} | ${dictionaries.en.site.tagline}`,
+    description: dictionaries.en.site.description,
     images: [
       {
         url: "/logo-full.png",
@@ -62,7 +73,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
-    description: siteConfig.description,
+    description: dictionaries.en.site.description,
     images: ["/logo-full.png"],
   },
   robots: {
@@ -90,14 +101,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${sora.variable} dark h-full`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${cinzel.variable} ${sora.variable} ${beVietnam.variable} dark h-full`}
+      suppressHydrationWarning
+    >
       <body className="min-h-full flex flex-col antialiased">
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script dangerouslySetInnerHTML={{ __html: bootScript }} />
         <ThemeProvider>
-          <JsonLd />
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <LanguageProvider>
+            <JsonLd />
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

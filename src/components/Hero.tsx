@@ -3,13 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { siteConfig } from "@/lib/data";
+import { useLanguage } from "@/components/LanguageProvider";
 
 const HERO_IMAGE =
   "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=80";
 
 export function Hero() {
   const reduce = useReducedMotion();
+  const { t } = useLanguage();
 
   return (
     <section className="relative min-h-[100svh] overflow-hidden grain">
@@ -49,19 +50,18 @@ export function Hero() {
             </div>
 
             <h1 className="display text-[clamp(2.4rem,6vw,4.8rem)] text-ivory">
-              {siteConfig.tagline}
+              {t.site.tagline}
             </h1>
             <p className="mt-6 max-w-xl text-base leading-8 text-muted md:text-lg">
-              Manufacturer of Indoor · Outdoor · Kitchen cabinets since 1995 — exporting
-              Vietnamese quality to the world.
+              {t.hero.subtitle}
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link href="/products" className="btn">
-                View Collections
+                {t.hero.viewCollections}
               </Link>
               <Link href="/about" className="btn btn-ghost">
-                Our Story
+                {t.hero.ourStory}
               </Link>
             </div>
           </motion.div>
@@ -74,7 +74,7 @@ export function Hero() {
         transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
       >
         <div className="flex flex-col items-center gap-2 text-[0.65rem] tracking-[0.3em] text-gold/80 uppercase">
-          <span>Scroll</span>
+          <span>{t.common.scroll}</span>
           <span className="h-8 w-px bg-gradient-to-b from-gold to-transparent" />
         </div>
       </motion.div>

@@ -1,8 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { navLinks, siteConfig } from "@/lib/data";
+import { useLanguage } from "@/components/LanguageProvider";
+import { siteConfig } from "@/lib/data";
+import { navHrefs } from "@/lib/i18n";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="border-t border-line bg-bg-elevated">
       <div className="container-wide section-pad !pb-10 !pt-16">
@@ -18,7 +24,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-5 max-w-md text-sm leading-7 text-muted">
-              {siteConfig.description}
+              {t.site.description}
             </p>
             <div className="mt-6 flex gap-4 text-sm tracking-wide text-gold">
               <a href={siteConfig.social.facebook} target="_blank" rel="noreferrer">
@@ -31,12 +37,12 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow">Navigate</p>
+            <p className="eyebrow">{t.common.navigate}</p>
             <ul className="mt-5 space-y-3 text-sm text-muted">
-              {navLinks.map((link) => (
+              {navHrefs.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="hover:text-gold">
-                    {link.label}
+                    {t.nav[link.key]}
                   </Link>
                 </li>
               ))}
@@ -44,7 +50,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow">Contact</p>
+            <p className="eyebrow">{t.common.contact}</p>
             <ul className="mt-5 space-y-3 text-sm leading-7 text-muted">
               <li>
                 <a href={siteConfig.phoneHref} className="hover:text-gold">
@@ -63,11 +69,9 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-3 border-t border-line pt-6 text-xs text-muted md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.
+            © {new Date().getFullYear()} {siteConfig.legalName}. {t.common.rights}
           </p>
-          <p className="tracking-[0.2em] uppercase text-gold/70">
-            Integrity · Quality · On Time
-          </p>
+          <p className="tracking-[0.2em] uppercase text-gold/70">{t.common.valuesLine}</p>
         </div>
       </div>
     </footer>

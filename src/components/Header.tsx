@@ -4,11 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { useLanguage } from "@/components/LanguageProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { navLinks, siteConfig } from "@/lib/data";
+import { siteConfig } from "@/lib/data";
+import { navHrefs } from "@/lib/i18n";
 
 export function Header() {
   const pathname = usePathname();
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -44,33 +48,35 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
-          {navLinks.map((link) => (
+          {navHrefs.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={`nav-link ${pathname === link.href ? "is-active" : ""}`}
             >
-              {link.label}
+              {t.nav[link.key]}
             </Link>
           ))}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <LanguageToggle />
           <ThemeToggle />
           <a href={siteConfig.phoneHref} className="text-sm text-muted hover:text-gold">
             {siteConfig.phone}
           </a>
           <Link href="/contact" className="btn !px-5 !py-3 text-[0.68rem]">
-            Get a Quote
+            {t.common.getQuote}
           </Link>
         </div>
 
         <div className="relative z-20 flex items-center gap-2 lg:hidden">
+          <LanguageToggle />
           <ThemeToggle />
           <button
             type="button"
             className="flex h-10 w-10 flex-col items-center justify-center gap-1.5"
-            aria-label="Menu"
+            aria-label={t.common.menu}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
           >
@@ -88,17 +94,17 @@ export function Header() {
       {open && (
         <div className="border-t border-line bg-bg/95 px-5 py-6 backdrop-blur-xl lg:hidden">
           <nav className="flex flex-col gap-5">
-            {navLinks.map((link) => (
+            {navHrefs.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`nav-link w-fit ${pathname === link.href ? "is-active" : ""}`}
               >
-                {link.label}
+                {t.nav[link.key]}
               </Link>
             ))}
             <Link href="/contact" className="btn mt-2">
-              Contact Us
+              {t.common.contactUs}
             </Link>
           </nav>
         </div>

@@ -1,9 +1,6 @@
 export const siteConfig = {
   name: "Dai Thanh Furniture",
   legalName: "DAI THANH FURNITURE JSC",
-  tagline: "Vietnamese Woodcraft — Global Standards",
-  description:
-    "Dai Thanh Furniture Joint Stock Company — a leading Vietnamese manufacturer of indoor, outdoor, and kitchen cabinet furniture since 1995.",
   url: "https://daithanhfurniture.com",
   phone: "+84 2563 510 600",
   phoneHref: "tel:+842563510600",
@@ -18,53 +15,14 @@ export const siteConfig = {
   },
 };
 
-export const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/products", label: "Products" },
-  { href: "/factory", label: "Factory" },
-  { href: "/contact", label: "Contact" },
-];
-
-export const stats = [
-  { value: "31+", label: "Years of Experience" },
-  { value: "1,800+", label: "Employees" },
-  { value: "20ha", label: "Factory Scale" },
-  { value: "200+", label: "Containers / Month" },
-];
-
-export const categories = [
-  {
-    slug: "outdoor",
-    title: "Outdoor",
-    subtitle: "Outdoor Furniture",
-    count: 10,
-    description:
-      "Premium outdoor wood collections for resorts, patios, gardens, and commercial spaces — built to endure every season.",
-    image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    slug: "indoor",
-    title: "Indoor",
-    subtitle: "Indoor Furniture",
-    count: 3,
-    description:
-      "Refined indoor designs with carefully selected timber and meticulous finishing — Vietnamese craftsmanship for modern living.",
-    image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    slug: "kitchen",
-    title: "Kitchen",
-    subtitle: "Kitchen Cabinetry",
-    count: 2,
-    description:
-      "Export-grade wooden kitchen cabinets optimized for function and aesthetics — for homes and commercial projects alike.",
-    image:
-      "https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1600&q=80",
-  },
-];
+export const categoryImages: Record<string, string> = {
+  outdoor:
+    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80",
+  indoor:
+    "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
+  kitchen:
+    "https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=1600&q=80",
+};
 
 export const products = [
   {
@@ -146,71 +104,8 @@ export const products = [
   },
 ];
 
-export const values = [
-  {
-    title: "Integrity",
-    text: "Transparent production capacity, factory scale, and product quality — building lasting partnerships.",
-  },
-  {
-    title: "Quality",
-    text: "Selected timber, ISO-aligned processes, and meticulous finishing to European, US, and Australian export standards.",
-  },
-  {
-    title: "On Time",
-    text: "Average capacity of ~200 × 40' containers per month — ready for large orders and international schedules.",
-  },
-  {
-    title: "Fine Craftsmanship",
-    text: "Vietnamese skilled hands combined with modern machinery to deliver trending, durable designs.",
-  },
+export const factoryLineImages = [
+  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1400&q=80",
+  "https://images.unsplash.com/photo-1556911220-bff31c875d1a?auto=format&fit=crop&w=1400&q=80",
 ];
-
-export const factoryLines = [
-  {
-    title: "Outdoor Production Line",
-    description:
-      "Outdoor furniture manufacturing — sofa, dining, sunlounge, and patio collections for export markets.",
-    image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    title: "Indoor Production Line",
-    description:
-      "Indoor production with strict quality control for residential spaces and furniture projects.",
-    image:
-      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    title: "Kitchen Cabinet Production Line",
-    description:
-      "Dedicated kitchen cabinet line — high precision and consistent finishing to export standards.",
-    image:
-      "https://images.unsplash.com/photo-1556911220-bff31c875d1a?auto=format&fit=crop&w=1400&q=80",
-  },
-];
-
-export const news = [
-  {
-    slug: "innovation-academia-industry",
-    title:
-      "Innovation and Academia–Industry Collaboration in the Local Industrial Ecosystem",
-    date: "2026",
-  },
-  {
-    slug: "new-year-greetings-2026",
-    title: "New Year Greetings 2026",
-    date: "2026",
-  },
-  {
-    slug: "merry-christmas-2026",
-    title: "Merry Christmas and Happy New Year 2026",
-    date: "2025",
-  },
-];
-
-export const aboutQuote =
-  "Thank you for visiting the DAI THANH FURNITURE JSC website. This is an opportunity for us to build a long-lasting business relationship with you. We hope you can easily find useful and transparent information regarding production capacity, factory scale, product quality, and the trending designs developed by our team.";
-
-export const aboutStory = `DAI THANH FURNITURE Co., Ltd. was founded on 23 June 1995 and converted into DAI THANH FURNITURE JSC on 25 October 2007. We have grown into one of Vietnam's leading wooden furniture factories in Indoor, Outdoor, and Kitchen cabinets.`;
-
-export const aboutExtra = `With about 1,800 employees and a factory of up to 20 hectares near National Highway 1A in Quy Nhon, Dai Thanh exports an average of about 200 × 40' containers per month to the US, Europe, and Australia — committed to Integrity · Quality · On Time.`;

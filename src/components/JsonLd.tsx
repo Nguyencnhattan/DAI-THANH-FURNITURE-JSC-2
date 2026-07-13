@@ -1,4 +1,5 @@
 import { siteConfig } from "@/lib/data";
+import { dictionaries } from "@/lib/i18n";
 
 export function JsonLd() {
   const data = {
@@ -17,7 +18,7 @@ export function JsonLd() {
       addressCountry: "VN",
     },
     sameAs: [siteConfig.social.facebook, siteConfig.social.youtube],
-    description: siteConfig.description,
+    description: dictionaries.en.site.description,
   };
 
   return (
