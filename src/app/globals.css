@@ -18,14 +18,9 @@
   --overlay-bottom: rgba(11, 9, 7, 0.85);
   --meta-fade: rgba(11, 9, 7, 0.92);
   --btn-ink: #140f09;
-  --font-display: var(--font-cinzel);
-  --font-body: var(--font-sora);
+  --font-display: var(--font-display-family);
+  --font-body: var(--font-body-family);
   color-scheme: dark;
-}
-
-html[lang="vi"] {
-  --font-display: var(--font-viet);
-  --font-body: var(--font-viet);
 }
 
 /* Light: gold + white (đối xứng dark: gold + black) */
@@ -61,8 +56,8 @@ html.light {
   --color-ivory: var(--ivory);
   --color-muted: var(--muted);
   --color-line: var(--line);
-  --font-display: var(--font-cinzel);
-  --font-body: var(--font-sora);
+  --font-display: var(--font-display-family);
+  --font-body: var(--font-body-family);
 }
 
 * {
@@ -77,7 +72,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ivory);
-  font-family: var(--font-body), var(--font-viet), "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-body), "Segoe UI", system-ui, sans-serif;
   font-feature-settings: "kern" 1, "liga" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -145,23 +140,23 @@ html.light .grain::after {
 }
 
 .display {
-  font-family: var(--font-display), var(--font-viet), "Times New Roman", serif;
-  letter-spacing: 0.04em;
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  letter-spacing: 0.02em;
   font-weight: 500;
-  line-height: 1.15;
+  line-height: 1.2;
   font-synthesis: none;
 }
 
 html[lang="vi"] .display,
 html[lang="vi"] .eyebrow,
 html[lang="vi"] .btn {
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .eyebrow {
-  font-family: var(--font-display), var(--font-viet), "Times New Roman", serif;
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
   font-size: 0.72rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
 }
@@ -175,9 +170,9 @@ html[lang="vi"] .btn {
   border: 1px solid var(--gold);
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
   color: var(--btn-ink);
-  font-family: var(--font-display), var(--font-viet), "Times New Roman", serif;
+  font-family: var(--font-body), "Segoe UI", system-ui, sans-serif;
   font-size: 0.78rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
 }

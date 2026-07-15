@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro, Cinzel, Sora } from "next/font/google";
+import { Be_Vietnam_Pro, Playfair_Display } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
@@ -9,24 +9,16 @@ import { siteConfig } from "@/lib/data";
 import { dictionaries } from "@/lib/i18n";
 import "./globals.css";
 
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
-  subsets: ["latin", "latin-ext"],
+const playfair = Playfair_Display({
+  variable: "--font-display-family",
+  subsets: ["latin", "latin-ext", "vietnamese"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
   adjustFontFallback: true,
 });
 
-const sora = Sora({
-  variable: "--font-sora",
-  subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-  adjustFontFallback: true,
-});
-
 const beVietnam = Be_Vietnam_Pro({
-  variable: "--font-viet",
+  variable: "--font-body-family",
   subsets: ["latin", "vietnamese"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
@@ -103,7 +95,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} ${sora.variable} ${beVietnam.variable} dark h-full`}
+      className={`${playfair.variable} ${beVietnam.variable} dark h-full`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col antialiased">
