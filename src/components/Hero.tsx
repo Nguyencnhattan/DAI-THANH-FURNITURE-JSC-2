@@ -32,27 +32,19 @@ export function Hero() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-3xl"
           >
-            <div className="mb-8 flex items-center gap-4">
-              <Image
-                src="/logo-mark.png"
-                alt=""
-                width={72}
-                height={72}
-                className="float-soft h-14 w-14 object-contain md:h-16 md:w-16"
+            <div className="mb-6 md:mb-8">
+              <h1 className="sr-only">Dai Thanh Furniture</h1>
+              {/* <Image
+                src="/logo-full.png"
+                alt="Dai Thanh Furniture"
+                width={220}
+                height={140}
+                className="float-soft h-auto w-[9.5rem] object-contain sm:w-44 md:w-52"
                 priority
-              />
-              <div>
-                <p className="display text-2xl tracking-[0.22em] text-ivory md:text-3xl">
-                  DAI THANH
-                </p>
-                <p className="mt-1 text-xs tracking-[0.42em] text-gold">FURNITURE</p>
-              </div>
+              /> */}
             </div>
 
-            <h1 className="display text-[clamp(2.4rem,6vw,4.8rem)] text-ivory">
-              {t.site.tagline}
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-8 text-muted md:text-lg">
+            <p className="max-w-xl text-base leading-8 text-muted md:text-lg">
               {t.hero.subtitle}
             </p>
 

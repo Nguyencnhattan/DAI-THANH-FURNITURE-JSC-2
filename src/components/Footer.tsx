@@ -19,8 +19,8 @@ export function Footer() {
                 src="/logo-full.png"
                 alt={siteConfig.legalName}
                 width={180}
-                height={90}
-                className="h-auto w-40 object-contain"
+                height={112}
+                className="h-auto w-36 object-contain md:w-40"
               />
             </Link>
             <p className="mt-5 max-w-md text-sm leading-7 text-muted">

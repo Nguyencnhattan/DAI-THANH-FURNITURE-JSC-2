@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
+import { BrandSlider } from "@/components/BrandSlider";
 import { Reveal } from "@/components/Reveal";
 import { useLanguage } from "@/components/LanguageProvider";
 import { categoryImages, products, siteConfig } from "@/lib/data";
@@ -62,6 +63,8 @@ export function HomeContent() {
           ))}
         </div>
       </section>
+
+      <BrandSlider />
 
       <section className="bg-bg">
         <div className="container-wide section-pad !pb-8">

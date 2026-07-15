@@ -29,22 +29,16 @@ export function Header() {
 
   return (
     <header className={`site-header ${scrolled || open ? "is-scrolled" : ""}`}>
-      <div className="container-wide flex items-center justify-between gap-4 px-5 py-4 md:px-8">
-        <Link href="/" className="relative z-20 flex items-center gap-3">
+      <div className="container-wide flex items-center justify-between gap-4 px-5 py-3 md:px-8 md:py-3.5">
+        <Link href="/" className="relative z-20 flex shrink-0 items-center">
           <Image
-            src="/logo-mark.png"
+            src="/logo-full.png"
             alt="Dai Thanh Furniture"
-            width={44}
-            height={44}
-            className="h-10 w-10 object-contain md:h-11 md:w-11"
+            width={160}
+            height={100}
+            className="h-auto w-[7.25rem] object-contain sm:w-32 md:w-36"
             priority
           />
-          <div className="hidden sm:block">
-            <p className="display text-[0.95rem] tracking-[0.2em] text-ivory">
-              DAI THANH
-            </p>
-            <p className="text-[0.62rem] tracking-[0.35em] text-gold">FURNITURE</p>
-          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

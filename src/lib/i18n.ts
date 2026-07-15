@@ -48,6 +48,9 @@ export type Dictionary = {
     getInTouch: string;
     contactTitle: string;
     sendMessage: string;
+    trustedBy: string;
+    trustedCount: string;
+    trustedCompanies: string;
   };
   about: {
     eyebrow: string;
@@ -172,6 +175,9 @@ const en: Dictionary = {
     getInTouch: "Get In Touch",
     contactTitle: "Ready to partner with global clients",
     sendMessage: "Send Message",
+    trustedBy: "Trusted by over",
+    trustedCount: "100+",
+    trustedCompanies: "companies",
   },
   about: {
     eyebrow: "About Us",
@@ -376,6 +382,9 @@ const vi: Dictionary = {
     getInTouch: "Liên hệ",
     contactTitle: "Sẵn sàng đồng hành cùng đối tác toàn cầu",
     sendMessage: "Gửi tin nhắn",
+    trustedBy: "Được tin tưởng bởi hơn",
+    trustedCount: "100+",
+    trustedCompanies: "doanh nghiệp",
   },
   about: {
     eyebrow: "Về chúng tôi",
